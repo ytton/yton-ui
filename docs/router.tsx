@@ -4,7 +4,7 @@ import Components from './pages/components';
 import Intro from './pages/intro';
 import Overall from './pages/components/overall';
 import { createElement } from 'react';
-import { createBrowserRouter, Navigate, RouteObject } from 'react-router-dom';
+import { createHashRouter, Navigate, RouteObject } from 'react-router-dom';
 import { AnyType } from './types';
 
 // 动态导入 MDX 组件
@@ -34,42 +34,39 @@ Object.keys(componentContext).map(path => {
     element: createElement(component.default, {})
   });
 });
-const appRouter = createBrowserRouter(
-  [
-    {
-      element: <Layout />,
-      children: [
-        {
-          path: '/home',
-          element: <Home />
-        },
-        {
-          path: '/intro',
-          element: <Intro />
-        },
-        {
-          path: '/components',
-          element: <Components />,
-          children: [
-            {
-              path: 'overall',
-              element: <Overall />
-            },
-            ...componentsRoutes,
-            {
-              path: '/components',
-              element: <Navigate to="/components/overall" />
-            }
-          ]
-        },
-        {
-          path: '/',
-          element: <Navigate to="/home" />
-        }
-      ]
-    }
-  ],
-  { basename: '/yton-ui/' }
-);
+const appRouter = createHashRouter([
+  {
+    element: <Layout />,
+    children: [
+      {
+        path: '/home',
+        element: <Home />
+      },
+      {
+        path: '/intro',
+        element: <Intro />
+      },
+      {
+        path: '/components',
+        element: <Components />,
+        children: [
+          {
+            path: 'overall',
+            element: <Overall />
+          },
+          ...componentsRoutes,
+          {
+            path: '/components',
+            element: <Navigate to="/components/overall" />
+          }
+        ]
+      },
+      {
+        path: '/',
+        element: <Navigate to="/home" />
+      }
+    ]
+  }
+]);
 
 export default appRouter;

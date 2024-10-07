@@ -79,7 +79,7 @@ const Components = () => {
               <div className="flex items-center mb-1">
                 <div className="text-gray-500 w-[4em]">使用</div>
                 <div className="px-2 py-1 rounded-sm cursor-pointer" title='复制'>
-                  <CodeBlock onClick={() => clipboard.copy(curMeta.use)} className="language-tsx">{curMeta.use}</CodeBlock>
+                  <CodeBlock onClick={() => clipboard.copy(curMeta.use)} language="tsx">{curMeta.use}</CodeBlock>
                 </div>
               </div>
               <div className="flex items-center">

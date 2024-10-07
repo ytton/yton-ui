@@ -18,7 +18,7 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/ytton/yton-ui.git"
+    "url": "https://www.github.com/ytton/yton-ui"
   },
   "homepage": "https://ytton.github.io/yton-ui/",
   "type": "module",
@@ -34,7 +34,7 @@
     "build:docs": "tsc --project tsconfig.doc.json && vite build --config vite.config.doc.ts",
     "deploy:docs": "npm run build:docs && gh-pages -d docs/dist",
     "lint": "eslint .",
-    "prepublishOnly": "npm run lint && npm run test:check && npm run build && npm run build:docs"
+    "prepublishOnly": "npm run lint && npm run test:check && npm run build && npm run deploy:docs"
   },
   "dependencies": {
     "axios": "^1.7.7",
