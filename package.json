@@ -1,7 +1,7 @@
 {
   "name": "yton-ui",
   "private": false,
-  "version": "0.1.0",
+  "version": "0.2.0",
   "author": "ytton",
   "description": "a react ui library",
   "license": "MIT",
