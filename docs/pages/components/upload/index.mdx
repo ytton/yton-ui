@@ -1,0 +1,41 @@
+---
+title: Upload 上传
+name: upload
+description: 文件选择上传和拖拽上传控件。
+use: import { Upload } from 'yton-ui'
+repo: https://www.github.com
+group: 数据录入
+---
+
+## 何时使用
+
+上传是将信息（网页、文字、图片、视频等）通过网页或者上传工具发布到远程服务器上的过程。
+
+- 当需要上传一个或一些文件时。
+- 当需要展现上传的进度时。
+
+## 代码演示
+
+<List columns={2}>
+  <CodeShow src="../upload/demo/base.tsx" title="基本用法" desc="简单的使用" />
+  <CodeShow src="../upload/demo/multiple.tsx" title="多文件上传" desc="设置 `multiple` 属性后，支持多文件上传。" />
+</List>
+
+## API
+
+属性说明如下：
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| classNames | 语义化结构 class | [Record\<SemanticDOM, string>](#semantic-dom) | - | - |
+| value | 当前数，受控值 | number | - | - |
+| defaultValue | 默认值 | number | 0 | - |
+| onChange | 每个item是否展示下边框 | boolean | false | - |
+| disabled | 禁用，开启后变成只读效果 | Boolean | false | - |
+| size | 图标大小 | 'small' \| 'meduim' \| 'large' | 'meduim' | - |
+| count | 展示多少个星 | number | 5 | - |
+| half | 是否允许半选 | Boolean | false | - |
+
+
+
+

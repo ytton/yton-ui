@@ -1,0 +1,20 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "strict": true,
+    "jsx": "react-jsx",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+      "docs/*": ["docs/*"],
+      "yton-ui": ["src"]
+    }
+  },
+  "include": [ "src","docs", "vite.config.docs.ts", "tsconfig.doc.json", "src/types" ],
+  "exclude": ["node_modules", "dist"]
+}

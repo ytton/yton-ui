@@ -1,0 +1,20 @@
+import './index.css';
+export { default as Button } from './components/Button';
+export { default as Icon } from './components/Icon';
+export { default as List } from './components/List';
+export { default as Menu } from './components/Menu';
+export { default as Rate } from './components/Rate';
+export { default as Alert } from './components/Alert';
+export { default as Tabs } from './components/Tabs';
+export { default as Input } from './components/Input';
+export { default as Upload } from './components/Upload';
+
+export type { ButtonProps } from './components/Button';
+export type { IconProps } from './components/Icon';
+export type { ListProps } from './components/List';
+export type { MenuProps, MenuItemType } from './components/Menu';
+export type { RateProps } from './components/Rate';
+export type { AlertProps } from './components/Alert';
+export type { TabsProps, TabItemType } from './components/Tabs';
+export type { InputProps } from './components/Input';
+export type { UploadProps, FileItem } from './components/Upload';

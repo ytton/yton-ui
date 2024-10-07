@@ -1,0 +1,49 @@
+---
+title: Menu 导航菜单
+name: menu
+description: 为页面和功能提供导航的菜单列表。
+use: import { Menu } from 'yton-ui'
+repo: https://www.github.com
+group: 导航
+---
+
+## 何时使用
+
+导航菜单是一个网站的灵魂，用户依赖导航在各个页面中进行跳转。一般分为顶部导航和侧边导航，顶部导航提供全局性的类目和功能，侧边导航提供多级结构来收纳和排列网站架构。
+
+
+## 代码演示
+
+import {List} from 'yton-ui'
+
+<CodeShow className="mb-2" src="../menu/demo/horizontal.tsx" title="顶部导航" desc="通过设置 `mode` 为horizontal，可以显示为水平的顶部导航菜单。" />
+
+<List columns={2}>
+  <CodeShow src="../menu/demo/inline.tsx" title="侧边导航" desc="通过设置 `mode` 为inline，可以显示为内联的菜单。" />
+  <CodeShow src="../menu/demo/vertical.tsx" title="垂直菜单" desc="通过设置 `mode` 为vertical，可以显示为垂直菜单。" />
+</List>
+
+## API
+
+### Menu
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| classNames | 语义化结构 class | [Record\<SemanticDOM, string>](#semantic-dom) | - | - |
+| items | 列表数据 | Array\<MenuItem> | - | - |
+| columns | 列数 | number | 1 | - |
+| bordered | 每个item是否展示下边框 | boolean | false | - |
+| renderItem | 自定义Item渲染过程 | (item) => ReactNode | (item) => item | - |
+
+### MenuItem
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| disabled | 是否禁用                 | boolean   | false  |        |
+| icon     | 菜单图标                 | ReactNode | -      |        |
+| key      | item 的唯一标志          | string    | -      |        |
+| label    | 菜单项标题               | ReactNode | -      |        |
+| title    | 设置收缩时展示的悬浮标题 | string    | -      |        |
+
+
+

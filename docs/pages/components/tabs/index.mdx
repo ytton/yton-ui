@@ -1,0 +1,43 @@
+---
+title: Tabs 标签页
+name: tabs
+description: 选项卡切换组件。
+use: import { Tabs } from 'yton-ui'
+repo: https://www.github.com
+group: 数据展示
+---
+
+## 何时使用
+
+提供平级的区域将大块内容进行收纳和展现，保持界面整洁。
+
+
+## 代码演示
+
+<List columns={2}>
+  <CodeShow src="../tabs/demo/base.tsx" title="基本用法" desc="简单的使用" />
+  <CodeShow src="../tabs/demo/card.tsx" title="卡片tab" desc="通知设置`card`属性，显示为卡片样式" />
+  <CodeShow src="../tabs/demo/icon.tsx" title="使用图标" desc="通过设置`icon`属性来添加图标" />
+</List>
+
+## API
+
+### Tabs
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| activeKey | 当前激活 tab 面板的 key | string | - |  |
+| defaultActiveKey | 初始化选中面板的 key，如果没有设置 activeKey | string | - |  |
+| items | 配置选项卡内容 | [TabItemType](#TabItemType) | - |  |
+| onChange | 切换面板的回调 | (activeKey: string) => void | - |  |
+
+### TabItemType
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| key | 对应 activeKey | string | - |  |
+| label | 选项卡头显示文字 | ReactNode | - |  |
+| icon | 选项卡头显示图标 | ReactNode | - |  |
+| disabled | 禁用某一项 | boolean | false |  |
+| content | 选项卡头显示内容 | ReactNode | - |  |
+

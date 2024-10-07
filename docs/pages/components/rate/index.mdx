@@ -1,0 +1,41 @@
+---
+title: Rate 评分
+name: rate
+description: 用于对事物进行评分操作。
+use: import { Rate } from 'yton-ui'
+repo: https://www.github.com
+group: 数据录入
+---
+
+## 何时使用
+
+- 对评价进行展示。
+- 对事物进行快速的评级操作。
+
+## 代码演示
+
+<List columns={2}>
+  <CodeShow src="../rate/demo/base.tsx" title="基本用法" desc="简单的使用" />
+  <CodeShow src="../rate/demo/half.tsx" title="半星用法" desc="通过设置`half`属性，可以显示半星。" />
+  <CodeShow src="../rate/demo/disabled.tsx" title="只读" desc="通过设置`disabled`属性，可以让评分组件变成只读的状态，失去鼠标交互。" />
+  <CodeShow src="../rate/demo/control.tsx" title="受控用法" desc="通过设置`value`属性，让组件变为受控组件" />
+</List>
+
+## API
+
+列表的属性说明如下：
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| classNames | 语义化结构 class | [Record\<SemanticDOM, string>](#semantic-dom) | - | - |
+| value | 当前数，受控值 | number | - | - |
+| defaultValue | 默认值 | number | 0 | - |
+| onChange | 每个item是否展示下边框 | boolean | false | - |
+| disabled | 禁用，开启后变成只读效果 | Boolean | false | - |
+| size | 图标大小 | 'small' \| 'meduim' \| 'large' | 'meduim' | - |
+| count | 展示多少个星 | number | 5 | - |
+| half | 是否允许半选 | Boolean | false | - |
+
+
+
+

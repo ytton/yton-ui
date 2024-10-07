@@ -1,0 +1,275 @@
+.markdown-container {
+  @primary-color: rgba(0, 0, 0, 0.88);
+  @link-color: #1677ff;
+  @secondary-color: rgba(5, 5, 5, 0.06);
+  @font-family-main: Avenir, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, 'Noto Sans',
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji', sans-serif;
+
+  color: @primary-color;
+  font-size: 14px;
+  line-height: 2;
+
+  img {
+    max-width: calc(100% - 32px);
+    max-height: 100%;
+  }
+  > p {
+    margin: 1em 0;
+  }
+  p > img {
+    margin: 34px auto;
+    box-shadow: 0 8px 20px rgba(143, 168, 191, 0.35);
+    display: block;
+
+    &.markdown-inline-image {
+      margin: 0;
+      box-shadow: none;
+    }
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: @font-family-main;
+    color: @primary-color;
+    margin-bottom: 20px;
+    font-weight: 500;
+  }
+
+  h1 {
+    margin-top: 8px;
+    font-size: 30px;
+    line-height: 38px;
+
+    .subtitle {
+      margin-inline-start: 12px;
+    }
+  }
+
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    clear: both;
+    margin: 1.6em 0 0.6em;
+  }
+
+  h2 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  h3 {
+    font-size: 18px;
+  }
+
+  h4 {
+    font-size: 16px;
+  }
+
+  h5 {
+    font-size: 14px;
+  }
+
+  h6 {
+    font-size: 12px;
+  }
+
+  hr {
+    margin: 24px 0;
+    background: @secondary-color;
+    border: 0;
+    height: 1px;
+    clear: both;
+  }
+
+  ul > li {
+    list-style-type: circle;
+    margin-inline-start: 20px;
+  }
+
+  ol > li {
+    list-style-type: decimal;
+    margin-inline-start: 20px;
+  }
+
+  code,
+  pre {
+    background: rgba(0, 0, 0, 0.04);
+    border: 1px solid @secondary-color;
+    border-radius: 4px;
+  }
+
+  code {
+    padding: 0.2em 0.4em;
+    font-size: 0.9em;
+  }
+
+  pre {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, Courier, monospace;
+    border-radius: 6px;
+    font-size: 13px;
+    color: @primary-color;
+    direction: ltr;
+    text-align: left;
+    background-color: #f5f5f5;
+    border: none;
+  }
+
+  .dumi-default-source-code {
+    margin: 1em 0;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 6px;
+
+    pre.prism-code {
+      padding: 12px 20px;
+      font-size: 14px;
+      line-height: 2;
+    }
+  }
+
+  table {
+    border: 1px solid @secondary-color;
+    border-collapse: collapse;
+
+    th {
+      color: #5c6b77;
+      font-weight: 500;
+      white-space: nowrap;
+      background: rgba(0, 0, 0, 0.02);
+      border-width: 1px 0;
+      padding: 12px 24px;
+      text-align: left;
+    }
+
+    td {
+      border-width: 1px 0;
+      padding: 12px 24px;
+      text-align: left;
+
+      &:first-child {
+        width: 18%;
+        min-width: 58px;
+        font-weight: 600;
+        color: @primary-color;
+        white-space: nowrap;
+      }
+
+      &:nth-child(2) {
+        min-width: 160px;
+      }
+
+      &:nth-child(3) {
+        width: 22%;
+        color: #c41d7f;
+        font-size: 13px;
+      }
+
+      &:nth-child(4) {
+        width: 15%;
+        font-size: 13px;
+      }
+
+      &:nth-child(5) {
+        width: 8%;
+        font-size: 13px;
+      }
+    }
+
+    tbody tr:hover {
+      background: rgba(60, 90, 100, 0.04);
+    }
+  }
+
+  blockquote {
+    margin: 1em 0;
+    padding-inline-start: 0.8em;
+    color: rgba(0, 0, 0, 0.65);
+    font-size: 90%;
+    border-left: 4px solid @secondary-color;
+
+    p {
+      margin: 0;
+    }
+  }
+
+  .anchor {
+    margin-inline-start: 8px;
+    opacity: 0;
+    transition: opacity 0.3s;
+  }
+
+  a {
+    display: inline-block;
+    text-decoration: none;
+    color: @link-color;
+    &:hover {
+      opacity: 0.75;
+    }
+  }
+
+  table {
+    border: 1px solid @secondary-color;
+
+    th,
+    td {
+      padding: 12px 24px;
+    }
+
+    th:first-child,
+    td:first-child {
+      border-left: 1px solid @secondary-color;
+    }
+
+    th:last-child,
+    td:last-child {
+      border-right: 1px solid @secondary-color;
+    }
+
+    th img,
+    td img {
+      max-width: unset;
+    }
+  }
+}
+
+.grid-demo {
+  .ant-row > div {
+    min-height: 30px;
+    margin: 8px 0;
+    color: #fff;
+    text-align: center;
+  }
+
+  .demo-col {
+    margin: 0;
+    padding: 30px 0;
+    font-size: 18px;
+  }
+
+  .code-box-demo {
+    .height-100 {
+      height: 100px;
+      line-height: 100px;
+    }
+
+    .height-50 {
+      height: 50px;
+      line-height: 50px;
+    }
+
+    .height-120 {
+      height: 120px;
+      line-height: 120px;
+    }
+
+    .height-80 {
+      height: 80px;
+      line-height: 80px;
+    }
+  }
+}

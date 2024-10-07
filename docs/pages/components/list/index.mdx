@@ -1,0 +1,39 @@
+---
+title: List 列表
+name: list
+description: 列表组件
+use: import { List } from 'yton-ui'
+repo: https://www.github.com
+group: 数据展示
+---
+
+## 何时使用
+
+最基础的列表展示，可承载文字、列表、图片、段落，常用于后台数据展示页面。
+
+
+## 代码演示
+
+import {List} from 'yton-ui'
+
+<List columns={2}>
+  <CodeShow src="../list/demo/base.tsx" title="基本用法" desc="通过直接使用 `children`" />
+  <CodeShow src="../list/demo/base2.tsx" title="属性控制渲染" desc="通过配置 `items` 和 `renderItem` 来渲染列表数据" />
+  <CodeShow src="../list/demo/columns.tsx" title="多列展示" desc="通过 `columns` 属性设置列数" />
+</List>
+
+## API
+
+列表的属性说明如下：
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| classNames | 语义化结构 class | [Record\<SemanticDOM, string>](#semantic-dom) | - | - |
+| items | 列表数据 | Array\<any> | - | - |
+| columns | 列数 | number | 1 | - |
+| bordered | 每个item是否展示下边框 | boolean | false | - |
+| renderItem | 自定义Item渲染过程 | (item) => ReactNode | (item) => item | - |
+
+
+
+

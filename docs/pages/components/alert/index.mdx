@@ -1,0 +1,42 @@
+---
+title: Alert 警告提醒
+name: alert
+description: 警告提示，展现需要关注的信息。
+use: import { Alert } from 'yton-ui'
+repo: https://www.github.com
+group: 反馈
+---
+
+## 何时使用
+
+- 当某个页面需要向用户显示警告的信息时。
+- 非浮层的静态展现形式，始终展现，不会自动消失，用户可以点击关闭。
+
+
+## 代码演示
+
+<List columns={2}>
+  <CodeShow src="../alert/demo/base.tsx" title="基本用法" desc="简单的使用" />
+  <CodeShow src="../alert/demo/type.tsx" title="四种类型" desc="通过 `type` 属性设置不同的类型" />
+  <CodeShow src="../alert/demo/icon.tsx" title="显示图标" desc="通过 `showIcon` 显示图标，通过 `icon` 属性设置图标" />
+  <CodeShow src="../alert/demo/desc.tsx" title="辅助文字" desc="通过 `description` 属性设置辅助介绍性文字" />
+  <CodeShow src="../alert/demo/closable.tsx" title="可关闭" desc="通过 `closable` 属性设置可关闭" />
+  <CodeShow src="../alert/demo/banner.tsx" title="顶部通知栏" desc="通过 `banner` 属性可让 Alert 呈现为顶部通知栏样式，且只显示`message`内容" />
+</List>
+
+## API
+
+| 属性 | 说明 | 类型 | 默认值 | 版本 |
+| --- | --- | --- | --- | --- |
+| banner | 是否用作顶部公告 | boolean | false |  |
+| closable | 可关闭配置 | boolean | `false` |  |
+| description | 警告提示的辅助性文字介绍 | ReactNode | - |  |
+| icon | 自定义图标，`showIcon` 为 true 时有效 | ReactNode | - |  |
+| message | 警告提示内容 | ReactNode | - |  |
+| showIcon | 是否显示辅助图标 | boolean | false，`banner` 模式下默认值为 true |  |
+| type | 指定警告提示的样式，有四种选择 `success`、`info`、`warning`、`error` | string | `info`，`banner` 模式下默认值为 `warning` |  |
+| onClose | 关闭时触发的回调函数 | (e: MouseEvent) => void | - |  |
+
+
+
+

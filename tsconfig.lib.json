@@ -1,0 +1,17 @@
+{
+  "extends": "./tsconfig.json", // 继承通用配置
+  "compilerOptions": {
+    "rootDir": "src", // 指定源码目录为 src
+    "outDir": "es/", // 输出目录
+    "declaration": true, // 生成类型声明
+    "declarationDir": "es/", // 类型声明文件输出目录
+    "emitDeclarationOnly": true // 只生成类型声明文件，不输出 JS 文件
+  },
+  "include": [
+    "src"
+  ],
+  "exclude": [
+    "src/**/*.test.tsx",
+    "src/test.setup.ts",
+  ]
+}
