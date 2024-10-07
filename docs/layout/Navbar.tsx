@@ -9,7 +9,7 @@ function Navbar() {
           <div className="flex justify-between h-16">
             <div className="flex">
               <Link to="/home" className="flex items-center flex-shrink-0 cursor-pointer">
-                <img className="w-8 h-8" src="/logo.png"  alt="Yton UI Logo" />
+                <img className="w-8 h-8" src="/yton-ui/logo.png"  alt="Yton UI Logo" />
                 <span className="ml-2 text-xl font-semibold text-blue-500 ">YTON UI</span>
               </Link>
               <div className="flex items-center ml-6">

@@ -21,6 +21,7 @@ export default defineConfig({
       providerImportSource: '@mdx-js/react'
     })
   ],
+  base: '/yton-ui/',
   publicDir: 'docs/public',
   build: {
     outDir: 'docs/dist'

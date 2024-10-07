@@ -14,7 +14,7 @@ export type RouteItem = RouteObject & {
   group: string;
   title: string;
   meta: Record<string, AnyType>;
-}
+};
 
 // 生成动态路由
 export const componentsRoutes: RouteItem[] = [];
@@ -31,42 +31,45 @@ Object.keys(componentContext).map(path => {
     group: component.meta.group,
     meta: component.meta,
     path: pathname,
-    element: createElement(component.default, { })
+    element: createElement(component.default, {})
   });
 });
-const appRouter = createBrowserRouter([
-  {
-    element: <Layout />,
-    children: [
-      {
-        path: '/home',
-        element: <Home />
-      },
-      {
-        path: '/intro',
-        element: <Intro />
-      },
-      {
-        path: '/components',
-        element: <Components />,
-        children: [
-          {
-            path: 'overall',
-            element: <Overall />
-          },
-          ...componentsRoutes,
-          {
-            path: '/components',
-            element: <Navigate to="/components/overall" />
-          }
-        ]
-      },
-      {
-        path: '/',
-        element: <Navigate to="/home" />
-      }
-    ]
-  }
-]);
+const appRouter = createBrowserRouter(
+  [
+    {
+      element: <Layout />,
+      children: [
+        {
+          path: '/home',
+          element: <Home />
+        },
+        {
+          path: '/intro',
+          element: <Intro />
+        },
+        {
+          path: '/components',
+          element: <Components />,
+          children: [
+            {
+              path: 'overall',
+              element: <Overall />
+            },
+            ...componentsRoutes,
+            {
+              path: '/components',
+              element: <Navigate to="/components/overall" />
+            }
+          ]
+        },
+        {
+          path: '/',
+          element: <Navigate to="/home" />
+        }
+      ]
+    }
+  ],
+  { basename: '/yton-ui/' }
+);
 
 export default appRouter;

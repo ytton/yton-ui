@@ -6,7 +6,7 @@ function Home() {
       <div className="px-4 py-6 sm:px-0">
         <div className="text-center">
           <h1 className="flex items-center font-bold text-gray-900 mb-26">
-            <img src="/logo.png" className="w-auto h-72" alt="yton ui" />
+            <img src="/yton-ui/logo.png" className="w-auto h-72" alt="yton ui" />
             <span className="ml-2 h-full text-[320px] inline-block bg-gradient-to-r from-blue-400 via-purple-500 to-pink-500 text-transparent bg-clip-text">
               UI
             </span>

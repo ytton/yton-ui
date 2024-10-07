@@ -32,6 +32,7 @@
     "test:check": "vitest run",
     "build": "tsc --project tsconfig.lib.json && vite build --config vite.config.ts",
     "build:docs": "tsc --project tsconfig.doc.json && vite build --config vite.config.doc.ts",
+    "deploy:docs": "npm run build:docs && gh-pages -d docs/dist",
     "lint": "eslint .",
     "prepublishOnly": "npm run lint && npm run test:check && npm run build && npm run build:docs"
   },
@@ -67,6 +68,7 @@
     "eslint": "^9.9.0",
     "eslint-plugin-react-hooks": "^5.1.0-rc.0",
     "eslint-plugin-react-refresh": "^0.4.9",
+    "gh-pages": "^6.1.1",
     "globals": "^15.9.0",
     "highlight.js": "^11.10.0",
     "jsdom": "^25.0.1",
