@@ -5,7 +5,7 @@ import React, { ReactNode, useState } from 'react';
 import { LiveEditor, LiveError, LivePreview, LiveProvider } from 'react-live';
 import { useLocation } from 'react-router-dom';
 import * as ytonUI from 'yton-ui';
-import { useClipboard } from "use-clipboard-copy";
+import { useClipboard } from 'use-clipboard-copy';
 import './index.less';
 type CodeShowProps = {
   src?: string;
@@ -16,7 +16,6 @@ type CodeShowProps = {
   onlyPreview?: boolean;
   noStyle?: boolean;
 };
-
 const demoContext = import.meta.glob('docs/pages/components/**/demo/*.tsx', {
   eager: true,
   query: '?raw',
@@ -61,7 +60,11 @@ const CodeShow: React.FC<CodeShowProps> = ({ src = '', code: propCode, title, de
           'border-x': !isActive
         })}
       >
-        <div title='复制' onClick={() => clipboard.copy(code)} className="absolute p-2 cursor-pointer top-2 right-2 hover:bg-gray-100">
+        <div
+          title="复制"
+          onClick={() => clipboard.copy(code)}
+          className="absolute p-2 cursor-pointer top-2 right-2 hover:bg-gray-100"
+        >
           <Icon icon="mdi-content-copy" />
         </div>
         <LiveEditor theme={themes.nightOwlLight} />
@@ -91,7 +94,7 @@ const CodeShow: React.FC<CodeShowProps> = ({ src = '', code: propCode, title, de
         noInline={true}
         scope={{ ...ytonUI, ...React, React }}
         transformCode={code => {
-          code = code.replace(/import .+\n/g, '');
+          code = code.replace(/import .+(;?)/g, '');
           code = code.replace(/export default (\w+);?/, 'render(< $1/>)');
           return code;
         }}
